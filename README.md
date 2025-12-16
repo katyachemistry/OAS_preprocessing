@@ -37,7 +37,9 @@ count_sequences_wrapper.sh ( -> parallel_count_sequences.sh)
 ```
 
 Usage: ./count_sequences_wrapper.sh /path/to/dir NUM_CPUS keyword1 keyword2 ...
+
 PLEASE USE AT MOST NUM_CPUS = total_cpus / 4 cores
+
 Examples:
 
 ```bash
@@ -49,6 +51,7 @@ bash src/utils/count_sequences_wrapper.sh data/raw 4 PBMC IGHV1
 ```
 
 1. **Create chunks for parallel processing:**
+
 Create txt files where each line is a csv.gz filename, with all the files in one chunk being less than X GB altogether, for further processing. For example, to create 10G chunks from raw data use:
 
 ```bash
@@ -77,9 +80,6 @@ python3 src/utils/gather_filtering_statistics.py
 ## Logs
 
 All logs are saved in the `logs/` directory.
-
-
-
 
 
 ```
